@@ -12,7 +12,7 @@
     },
     methods: {
       minone() {
-        this.$store.commit('decrement', this.price);
+        this.$store.dispatch('decr', this.price);
       }
     }
   };

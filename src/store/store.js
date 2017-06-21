@@ -17,5 +17,10 @@ export default new Vuex.Store({
     decrement (state, price) {
       state.tetal -= price;
     }
+  },
+  actions: {
+    decr (context, price) {
+      context.commit('decrement', price);
+    }
   }
 });
