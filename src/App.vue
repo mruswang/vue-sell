@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <v-header :seller="seller"></v-header>
+    {{ tetal }}
     <div class="tab">
       <div class="tab-item">
         <router-link to="/goods">商品</router-link>
@@ -31,8 +32,13 @@
       this.$http.get('/api/seller').then(response => {
         response = response.body;
         this.seller = response.data;
-      //  console.log(this.seller);
+        //  console.log(this.seller);
       });
+    },
+    computed: {
+      tetal () {
+        return this.$store.state.tetal;
+      }
     }
   };
 </script>
